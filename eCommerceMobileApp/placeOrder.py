@@ -107,7 +107,7 @@ except Exception as e:
 
 # Place Order
 try:
-    print("place order")
+    # print("place order")
     # Got to Cart
     cart = "com.nopstation.nopcommerce.nopstationcart:id/counterIcon"
     element = driver.find_element(
@@ -177,24 +177,24 @@ try:
     element.click()
     time.sleep(5)
 
-    # Scroll down
-    img = '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[14]'
-    imgElement = driver.find_element(
-        by=AppiumBy.XPATH,
-        value=img,
-    )
-    action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
-    time.sleep(3)
-
-    img = '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[15]'
-    imgElement = driver.find_element(
-        by=AppiumBy.XPATH,
-        value=img,
-    )
-    action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
-    time.sleep(3)
+    # # Scroll down
+    # img = '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[14]'
+    # imgElement = driver.find_element(
+    #     by=AppiumBy.XPATH,
+    #     value=img,
+    # )
+    # action = TouchAction(driver)
+    # action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    # time.sleep(3)
+    #
+    # img = '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[15]'
+    # imgElement = driver.find_element(
+    #     by=AppiumBy.XPATH,
+    #     value=img,
+    # )
+    # action = TouchAction(driver)
+    # action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    # time.sleep(3)
 
     selectCountry = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[13]"
     element = driver.find_element(
@@ -292,12 +292,34 @@ try:
     element.click()
     element.send_keys('01731528978')
     # time.sleep(2)
+    driver.press_keycode(66)
     # driver.press_keycode(66)
     time.sleep(5)
 
+    fax = "com.nopstation.nopcommerce.nopstationcart:id/etFax"
+    element = driver.find_element(
+        by=AppiumBy.ID,
+        value=fax,
+    )
+    element.click()
+    element.send_keys('')
+    # time.sleep(2)
+    driver.press_keycode(66)
+    # driver.press_keycode(66)
+    time.sleep(5)
+
+    img = 'com.nopstation.nopcommerce.nopstationcart:id/etFax'
+    imgElement = driver.find_element(
+        by=AppiumBy.ID,
+        value=img,
+    )
+    action = TouchAction(driver)
+    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    time.sleep(3)
+
     con = 'com.nopstation.nopcommerce.nopstationcart:id/btnContinue'
     element = driver.find_element(
-        by=AppiumBy.XPATH,
+        by=AppiumBy.ID,
         value=con,
     )
     element.click()
@@ -365,7 +387,7 @@ try:
     element.click()
     time.sleep(5)
 
-    nxt = "android.widget.Button"
+    nxt = "com.nopstation.nopcommerce.nopstationcart:id/paymentInfoWebView"
     element = driver.find_element(
         by=AppiumBy.ID,
         value=nxt,
