@@ -58,12 +58,12 @@ try:
         value=burger,
     )
     action = TouchAction(driver)
-    action.long_press(burgerElement).move_to(x=0, y=0).release().perform()
+    action.long_press(burgerElement, duration=20000).move_to(x=0, y=0).release().perform()
     # element.click()
     time.sleep(2)
 
     # Click to mattress bedroom
-    mattressBedroom = '(//android.widget.ImageView[@content-desc="Placeholder"])[5]'
+    mattressBedroom = '(//android.widget.ImageView[@content-desc="Placeholder"])[15]'
     element = driver.find_element(
         by=AppiumBy.XPATH,
         value=mattressBedroom,
@@ -78,7 +78,7 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
     time.sleep(3)
 
     # Clicking plus button
@@ -115,7 +115,7 @@ try:
         value=cart,
     )
     element.click()
-    time.sleep(2)
+    time.sleep(5)
 
     # Clicking Checkout
     checkOut = "com.nopstation.nopcommerce.nopstationcart:id/btnCheckOut"
@@ -133,7 +133,7 @@ try:
         value=guest,
     )
     element.click()
-    time.sleep(2)
+    time.sleep(5)
 
     # Input all the details
     firstName = "com.nopstation.nopcommerce.nopstationcart:id/etFirstName"
@@ -143,9 +143,9 @@ try:
     )
     element.click()
     element.send_keys('Mike')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     lastName = "com.nopstation.nopcommerce.nopstationcart:id/etLastName"
     element = driver.find_element(
@@ -154,9 +154,9 @@ try:
     )
     element.click()
     element.send_keys('Ahmed')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     email = "com.nopstation.nopcommerce.nopstationcart:id/etEmail"
     element = driver.find_element(
@@ -165,9 +165,9 @@ try:
     )
     element.click()
     element.send_keys('mike@gmail.com')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     country = "com.nopstation.nopcommerce.nopstationcart:id/countrySpinner"
     element = driver.find_element(
@@ -175,7 +175,7 @@ try:
         value=country,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     # # Scroll down
     # img = '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[14]'
@@ -202,7 +202,7 @@ try:
         value=selectCountry,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     img = 'com.nopstation.nopcommerce.nopstationcart:id/etEmail'
     imgElement = driver.find_element(
@@ -210,8 +210,8 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
-    time.sleep(3)
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
+    time.sleep(2)
 
     state = "com.nopstation.nopcommerce.nopstationcart:id/stateSpinner"
     element = driver.find_element(
@@ -219,7 +219,7 @@ try:
         value=country,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     selectState = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/" \
                       "android.widget.TextView[2]"
@@ -228,7 +228,7 @@ try:
         value=selectState,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     company = "com.nopstation.nopcommerce.nopstationcart:id/etCompanyName"
     element = driver.find_element(
@@ -237,9 +237,9 @@ try:
     )
     element.click()
     element.send_keys('Brain Station 23')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     city = "com.nopstation.nopcommerce.nopstationcart:id/etCity"
     element = driver.find_element(
@@ -248,9 +248,9 @@ try:
     )
     element.click()
     element.send_keys('Dhaka')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     address = "com.nopstation.nopcommerce.nopstationcart:id/etStreetAddress"
     element = driver.find_element(
@@ -259,9 +259,9 @@ try:
     )
     element.click()
     element.send_keys('Mirpur DOHS, Dhaka')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     # Scroll Down
     img = 'com.nopstation.nopcommerce.nopstationcart:id/etStreetAddress'
@@ -270,7 +270,7 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
     time.sleep(3)
 
     zipCode = "com.nopstation.nopcommerce.nopstationcart:id/etZipCode"
@@ -280,9 +280,9 @@ try:
     )
     element.click()
     element.send_keys('1216')
-    time.sleep(2)
+    # time.sleep(2)
     driver.press_keycode(66)
-    time.sleep(5)
+    time.sleep(2)
 
     phone = "com.nopstation.nopcommerce.nopstationcart:id/etPhone"
     element = driver.find_element(
@@ -292,30 +292,30 @@ try:
     element.click()
     element.send_keys('01731528978')
     # time.sleep(2)
-    driver.press_keycode(66)
     # driver.press_keycode(66)
-    time.sleep(5)
-
-    fax = "com.nopstation.nopcommerce.nopstationcart:id/etFax"
-    element = driver.find_element(
-        by=AppiumBy.ID,
-        value=fax,
-    )
-    element.click()
-    element.send_keys('')
-    # time.sleep(2)
-    driver.press_keycode(66)
     # driver.press_keycode(66)
-    time.sleep(5)
-
-    img = 'com.nopstation.nopcommerce.nopstationcart:id/etFax'
-    imgElement = driver.find_element(
-        by=AppiumBy.ID,
-        value=img,
-    )
-    action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
     time.sleep(3)
+
+    # fax = "com.nopstation.nopcommerce.nopstationcart:id/etFax"
+    # element = driver.find_element(
+    #     by=AppiumBy.ID,
+    #     value=fax,
+    # )
+    # element.click()
+    # element.send_keys('')
+    # # time.sleep(2)
+    # driver.press_keycode(66)
+    # # driver.press_keycode(66)
+    # time.sleep(5)
+
+    # img = 'com.nopstation.nopcommerce.nopstationcart:id/etFax'
+    # imgElement = driver.find_element(
+    #     by=AppiumBy.ID,
+    #     value=img,
+    # )
+    # action = TouchAction(driver)
+    # action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    # time.sleep(3)
 
     con = 'com.nopstation.nopcommerce.nopstationcart:id/btnContinue'
     element = driver.find_element(
@@ -323,7 +323,7 @@ try:
         value=con,
     )
     element.click()
-    time.sleep(10)
+    time.sleep(5)
 
     opt = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout[2]/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/com.bs.ecommerce.customViews.RadioGridGroupforReyMaterial/android.widget.RelativeLayout[4]"
     element = driver.find_element(
@@ -331,7 +331,7 @@ try:
         value=opt,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     # Scroll down
     img = '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout[2]/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/com.bs.ecommerce.customViews.RadioGridGroupforReyMaterial/android.widget.RelativeLayout[2]'
@@ -340,7 +340,7 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
     time.sleep(3)
 
     con1 = "com.nopstation.nopcommerce.nopstationcart:id/btnContinue"
@@ -358,7 +358,7 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
     time.sleep(3)
 
     # Scroll down
@@ -368,7 +368,7 @@ try:
         value=img,
     )
     action = TouchAction(driver)
-    action.long_press(imgElement).move_to(x=0, y=0).release().perform()
+    action.long_press(imgElement, duration=10000).move_to(x=0, y=0).release().perform()
     time.sleep(3)
 
     money = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout[2]/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/com.bs.ecommerce.customViews.RadioGridGroupforReyMaterial/android.widget.RelativeLayout[4]"
@@ -377,7 +377,7 @@ try:
         value=money,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(2)
 
     con2 = "com.nopstation.nopcommerce.nopstationcart:id/btnContinue"
     element = driver.find_element(
@@ -385,19 +385,21 @@ try:
         value=con2,
     )
     element.click()
-    time.sleep(5)
+    time.sleep(3)
 
-    nxt = "com.nopstation.nopcommerce.nopstationcart:id/paymentInfoWebView"
-    element = driver.find_element(
-        by=AppiumBy.ID,
-        value=nxt,
-    )
-    element.click()
-    time.sleep(5)
-
-    confirm = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.RelativeLayout[2]/android.widget.FrameLayout[2]/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[10]"
+    nxt = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView"
     element = driver.find_element(
         by=AppiumBy.XPATH,
+        value=nxt,
+    )
+    # action = TouchAction(driver)
+    # action.tap(element).perform()
+    element.click()
+    time.sleep(3)
+
+    confirm = "com.nopstation.nopcommerce.nopstationcart:id/btnContinue"
+    element = driver.find_element(
+        by=AppiumBy.ID,
         value=confirm,
     )
     element.click()
